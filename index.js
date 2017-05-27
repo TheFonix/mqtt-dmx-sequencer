@@ -15,9 +15,9 @@ log.setLevel(config.verbosity);
 log.info(pkg.name, pkg.version, 'starting');
 
 var scenes = require(config.scenes);
-log.info('scenes loaded from', config.scenes);
+log.info('Scenes Loaded Dir=', config.scenes);
 var sequences = require(config.sequences);
-log.info('sequences loaded from', config.sequences);
+log.info('Sequences Loaded Dir=', config.sequences);
 
 artnet.data[0] = [];
 var sequencer = require('./lib/sequencer.js')({
@@ -33,14 +33,14 @@ sequencer.on('transition-conflict', function (ch) {
 
 var mqttConnected;
 
-log.info('mqtt trying to connect', config.url);
+log.info('-MQTT Connect- Attempting Connection', config.url);
 var mqtt = Mqtt.connect(config.url, {will: {topic: config.name + '/connected', payload: '0'}});
 
 mqtt.on('connect', function () {
     mqttConnected = true;
-    log.info('mqtt connected ' + config.url);
+    log.info('-MQTT Connect- Connection Success' + config.url);
     mqtt.publish(config.name + '/connected', '2');
-    log.info('mqtt subscribe', config.name + '/set/#');
+    log.info('-MQTT Connect- Subscribed to', config.name + '/set/#');
     mqtt.subscribe(config.name + '/set/#');
 });
 
@@ -56,12 +56,12 @@ mqtt.on('error', function () {
 });
 
 process.on('SIGINT', function () {
-    log.info('got SIGINT. exiting.');
+    log.info('SIGINT, Shutting down internal server');
     process.exit(0);
 });
 
 process.on('SIGTERM', function () {
-    log.info('got SIGTERM. exiting.');
+    log.info('SIGTERM, Shutting down internal server');
     process.exit(0);
 });
 
@@ -79,7 +79,7 @@ mqtt.on('message', function (topic, payload) {
         case 'channel':
             channel = parseInt(tpArr[3], 10);
             if (channel < 1 || channel > 512) {
-                log.error('invalid channel', tpArr[3]);
+                log.error('Invalid Channel', tpArr[3]);
             } else {
                 artnet.set(channel, parseInt(payload, 10));
             }
@@ -91,7 +91,7 @@ mqtt.on('message', function (topic, payload) {
                 transition = parseFloat(payload) || 0;
                 sequencer.setScene([scene, transition]);
             } else {
-                log.error('unknown scene', scene);
+                log.error('Unknown Scene', scene);
             }
             break;
         case 'sequence':
@@ -106,11 +106,11 @@ mqtt.on('message', function (topic, payload) {
                 log.debug('newSequence', sequence);
                 newSequence(sequence, payload);
             } else {
-                log.error('unknown sequence', sequence);
+                log.error('Unknown Sequence', sequence);
             }
             break;
         default:
-            log.error('unknown cmd', tpArr[2]);
+            log.error('Unknown Command', tpArr[2]);
     }
 
     function newSequence(sequence, payload) {
@@ -147,4 +147,3 @@ mqtt.on('message', function (topic, payload) {
         });
     }
 });
-
