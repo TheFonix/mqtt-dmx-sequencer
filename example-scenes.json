@@ -2,11 +2,11 @@
   "white on":        [null, null, null, 255, null, null, null, 255, null, null, null, 255, null, null, null, 255, null, null, null, 255, null, null, null, 255, null, null, null, 255, null, null, null, 255, null, null, null, 255, 255, 255],
   "white off":        [null, null, null, 255, null, null, null, 0, null, null, null, 255, null, null, null, 0, null, null, null, 255, null, null, null, 0, null, null, null, 255, null, null, null, 0, null, null, null, 0, 0, 0],
 
-  "red on":        [null, null, null, 255, 255, null, null, null, null, null, null, 255, 255, null, null, null, null, null, null, 255, 255, null, null, null, null, null, null, 255, 255, null, null, null, 255, null, null, 255, null, null],
-  "red off":        [null, null, null, 255, 0, null, null, null, null, null, null, 255, 0, null, null, null, null, null, null, 255, 0, null, null, null, null, null, null, 255, 0, null, null, null, 0, null, null, 0, null, null],    
+  "red on":        [null, null, null, 255, null, null, null, null, null, null, null, 255, null, null, null, null, null, null, null, 255, null, null, null, null, null, null, null, 255, null, null, null, null, 255, null, null, 255, null, null],
+  "red off":        [null, null, null, 255, null, null, null, null, null, null, null, 255, null, null, null, null, null, null, null, 255, null, null, null, null, null, null, null, 255,null, null, null, null, 0, null, null, 0, null, null],    
 
-  "green on":        [null, null, null, 255, null, 255, null, null, null, null, null, 255, null, 255, null, null, null, null, null, 255, null, 255, null, null, null, null, null, 255, null, 255, null, null, null, 255, null, null, 255, null],
-  "green off":        [null, null, null, 255, null, 0, null, null, null, null, null, 255, null, 0, null, null, null, null, null, 255, null, 0, null, null, null, null, null, 255, null, 0, null, null, null, 0, null, null, 0, null],
+  "green on":        [null, null, null, 255, null, 255, null, null, null, null, null, 255, null, 255, null, null, null, null, null, 255, null, 255, null, null, null, null, null, 255, null, null, null, null, null, 255, null, null, 255, null],
+  "green off":        [null, null, null, 255, null, 0, null, null, null, null, null, 255, null, 0, null, null, null, null, null, 255, null, 0, null, null, null, null, null, 255, null, null, null, null, null, 0, null, null, 0, null],
 
   "blue on":        [null, null, null, 255, null, null, 255, null, null, null, null, 255, null, null, 255, null, null, null, null, 255, null, null, 255, null, null, null, null, 255, null, null, 255, null, null, null, 255, null, null, 255],
   "blue off":        [null, null, null, 255, null, null, 0, null, null, null, null, 255, null, null, 0, null, null, null, null, 255, null, null, 0, null, null, null, null, 255, null, null, 0, null, null, null, 0, null, null, 0]    
