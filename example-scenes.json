@@ -24,6 +24,11 @@
   "greenlasers off":        [255, null, null, null, null, null, null, 0, 255, null, null, null, null, null, null, 0, 255, null, null, null, null, null, null, 0, null, null, null, null, null, null, null, null, null, null, null],
 
   "redlasers on":        [255, null, null, null, null, null, null, 55, 255, null, null, null, null, null, null, 55, 255, null, null, null, null, null, null, 55, null, null, null, null, null, null, null, null, null, null, null],
-  "redlasers off":        [255, null, null, null, null, null, null, 0, 255, null, null, null, null, null, null, 0, 255, null, null, null, null, null, null, 0, null, null, null, null, null, null, null, null, null, null, null]
+  "redlasers off":        [255, null, null, null, null, null, null, 0, 255, null, null, null, null, null, null, 0, 255, null, null, null, null, null, null, 0, null, null, null, null, null, null, null, null, null, null, null],
 
+  "dim on":        [30, null, null, null, null, null, null, null, 30, null, null, null, null, null, null, null, 30, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+  "dim off":        [255, null, null, null, null, null, null, null, 255, null, null, null, null, null, null, null, 255, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+
+  "bed on":        [20, null, null, null, null, null, null, null, 20, null, null, null, null, null, null, null, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 0, 0, 0],
+  "bed off":        [255, null, null, null, null, null, null, null, 255, null, null, null, null, null, null, null, 255, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 0, 0, 0]
 }
